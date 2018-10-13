@@ -1,0 +1,172 @@
+@import '~variables.scss';
+
+.recommendauthors {
+	width:280px;
+	.ratitle {
+		.barcode {
+			width: 100%;
+			height:80px;
+			cursor: pointer;
+			margin-top: 10px;
+			border-radius: 4px;
+			border:1px solid $splitline;
+			padding-left: 20px;
+			position:relative;
+			@include flexlayout(flex-start,center);
+			.barcodeimg {
+				height:60px;
+				width: 60px;
+				img {
+					height:60px;
+					width: 60px;
+					display: block;
+				}
+			}
+			.ratext {
+				margin-left: 10px;
+				.top {
+					font-size:16px;
+					margin-bottom: 8px;
+				}
+				.bottom {
+					font-size: 14px;
+					color:$maincolor;
+				}
+			}
+			.fadepic {
+				top:-190px;
+				left:60px;
+				position: absolute;
+				width: 180px;
+				height:180px;
+				padding:8px 12px 12px 8px;
+				background:$maincolor2;
+				border-radius: 4px;
+				border:1px solid $maincolor;
+				box-shadow: 0 8px 0 $splitline;
+				.fadepicitem {
+					display: block;
+					width: 160px;
+					height:160px;
+				}
+				// @keyframes  fadeIn1{		
+				// 	0% {
+				// 		opacity: 0;
+				//     }		
+				// 	100% {
+				// 		opacity: 1;	
+				// 	}
+				// }
+				// animation:  fadeIn1 0.1s ease 0.5s 1 both;
+			}
+			.arrow-box3 {
+				position:absolute;
+				top:-11px;
+				left:140px;
+				width:0;
+				height:0;
+				overflow:hidden;
+				border:12px solid transparent;
+				border-top-color:$maincolor;
+				// @keyframes  fadeIn1{		
+				// 	0% {
+				// 		opacity: 0;
+				//     }		
+				// 	100% {
+				// 		opacity: 1;	
+				// 	}
+				// }
+				// animation:  fadeIn1 0.1s ease 0.5s 1 both;
+			}
+			.arrow-box4 {
+				position:absolute;
+		   	    top:-11px;
+		   	    left:142px;
+				width:0;
+				height:0;
+				overflow:hidden;
+				border:10px solid transparent;
+				border-top-color:$maincolor2;
+				// @keyframes  fadeIn1{		
+				// 	0% {
+				// 		opacity: 0;
+				//     }		
+				// 	100% {
+				// 		opacity: 1;	
+				// 	}
+				// }
+				// animation:  fadeIn1 0.1s ease 0.5s 1 both;
+			}
+		}
+		
+		.authortiel {
+			margin-top: 40px;
+			font-size: 14px;
+			color:$maincolor;
+			@include flexlayout(space-between,center);
+			.rarefresh {
+				cursor: pointer;
+				&:hover {
+					color:$maincolor3;
+				}
+			}
+		}
+	}
+	.ralist {
+		width: 280px;
+		height: 47px;
+		margin-top: 10px;
+		.ralistitem {
+			width: 100%;
+			margin-top: 20px;
+			@include flexlayout(flex-start,center);
+			.ralistavatar {
+				width: 48px;
+				height: 48px;
+				cursor: pointer;
+				margin-right: 20px;
+				img {
+					display: block;
+					width: 48px;
+					height:48px;
+					border-radius: 24px;
+				}
+			}
+			.ralistinfo {
+				font-size: 14px;
+				width: 211px;
+				.ralistinfonameadd {
+					@include flexlayout(space-between,center);
+					.ralistnickname {
+						cursor: pointer;						
+					}
+					.ralistadd {
+						color:$addgreen;
+						cursor: pointer;						
+					}
+				} 
+				.remark {
+					font-size: 12px;
+					color:$maincolor;
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+	.checkall {
+		width: 280px;
+		height:36px;
+	    font-size: 13px;
+    	color: #787878;
+    	cursor: pointer;
+    	margin-top: 300px;
+    	text-align: center;
+    	line-height: 36px;
+		padding: 0 7px 0 12px;
+		background-color:$fontcolor;
+	    border: 1px solid #dcdcdc;
+	    border-radius: 4px;
+	    
+	}
+
+}

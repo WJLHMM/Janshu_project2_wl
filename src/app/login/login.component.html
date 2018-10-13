@@ -1,0 +1,32 @@
+<div class="loginwrapper">
+	<p class="janshulogo" (click) = "doHome()"><img src="https://cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="janshulogo" class="logimg"></p>
+	<div class="loginmain">
+		<div class="logtitle">
+			<p class="logpage">登录</p>
+			<p class="dot">	&sdot;</p>
+			<p class="registerpage" (click)="doRegister()">注册</p>
+		</div>
+		<form class="logsection" action="" method="" accept-charset="utf-8">
+			<input type="text" class="lgaccount" placeholder="手机号或邮箱">
+			<input type="text" class="lgpassword" placeholder="密码">
+			<i class="fa fa-user account" aria-hidden="true"></i>
+			<i class="fa fa-lock password" aria-hidden="true"></i>
+		</form>
+		<div class="logmatter">
+			<form action="" method="get" accept-charset="utf-8">
+				<input type="checkbox" class="checkout">记住我
+			</form>
+			<p class="logmattex" (click) = "doHome()">登录遇到问题? </p>
+		</div>
+		<button class="logbtn" (click)="isLoginfn()">登录</button>
+		<h6 class="dividedline">社交账号登录</h6>
+		<div class="otherlogway">
+			<p class="logweibo"><i class="fa fa-weibo fa-2x" aria-hidden="true"></i></p>
+			<p class="logweixin"><i class="fa fa-weixin fa-2x" aria-hidden="true"></i></p>
+			<p class="logqq"><i class="fa fa-qq fa-2x" aria-hidden="true"></i></p>
+			<p class="lgothers">其它</p>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,21 @@
+@import '~variables.scss';
+
+.container {
+	margin:56px auto;
+	width:960px;
+	z-index: 1;
+	padding-top:30px;
+	padding-left:15px;
+	@include flexlayout (space-between,flex-start);
+	.leftwrapper {
+		width:640px;
+		height: 1000px;
+	}
+
+	.rightwrapper {
+		width:280px;
+		height: 1000px;
+	}
+
+
+}

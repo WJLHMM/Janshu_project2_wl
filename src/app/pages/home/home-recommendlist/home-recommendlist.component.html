@@ -1,0 +1,8 @@
+<ul class="recommendlistWrapper" >
+	<li class="recommendlistitem" *ngFor="let list of topiclist" (click)="doRecommendlist(list.id)">
+		<img src={{list.imgUrl}} alt="recommendpic" class="avatar">
+		<p class="name">{{list.title}}</p>
+	</li>
+	<li class= "getmorelist">更多热门专题 <i class="fa fa-angle-right" aria-hidden="true"></i></li>
+</ul>
+

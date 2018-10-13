@@ -1,0 +1,67 @@
+@import '~variables.scss';
+
+.banner {
+	position: relative;
+	width:625px;
+	height:270px;
+	overflow: hidden;
+	cursor: pointer;
+	.bannerwrapper {
+		width:800%;
+		height:100%;
+		@include flexlayout (flex-start,center);
+		.bannerimgitem {
+			width: 12.5%;
+			height: 100%;
+			.bannerimg {
+				width:100%;
+				height: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+	.bannercontrollerl {
+		top:115px;
+		left:0;
+		width: 40px;
+		height:50px;
+		padding-top:16px;
+		padding-left:16px;
+		position:absolute;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		background: $maincolor;
+		.fa-angle-left {
+			color:$maincolor2;
+		}
+	}
+	.bannercontrollerr {
+		top:115px;
+		right:0;
+		width: 40px;
+		height:50px;
+		padding-top:16px;
+		padding-left:16px;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		position:absolute;
+		background: $maincolor;
+		.fa-angle-right {
+			color:$maincolor2;
+		}
+	}
+	.bannershowtip {
+		position:absolute;
+		top:240px;
+		left:100px;
+		width:500px;
+		height:24px;
+		padding-left:115px;
+		@include flexlayout (flex-start,center);
+		.bannershowtipitem {
+			width:30px;
+			height:2px;
+			margin-left: 5px;
+		}
+	}
+}

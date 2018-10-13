@@ -1,0 +1,48 @@
+@import '~variables.scss';
+
+.backtopwrapper {
+	position:fixed;
+	bottom:50px;
+	right:40px;
+	width: 52px;
+	height:52px;
+	display: table;
+	background:$maincolor2;
+	border: 1px solid $maincolor;
+	&:hover {
+		background:$splitline;
+	}
+	.backtop {
+		width: 100%;
+		height:100%;
+		line-height: 50px;
+		text-align: center;
+		font-size: 18px;
+		i {
+			color:$maincolor;
+		}
+	}
+	.showtext {
+		position: absolute;
+		top:10px;
+		left:-90px;
+		width: 80px;
+		height:30px;
+		text-align: center;
+		line-height: 30px;
+		font-size: 14px;
+		border-radius: 4px;
+		background-color: $bgc1;
+		color:$maincolor2;
+		.arrow-box5 {
+			position:relative;
+			top:-20px;
+			left:80px;
+			width:0;
+			height:0;
+			overflow:hidden;
+			border:6px solid transparent;
+			border-left-color:  $bgc1;;
+		}
+	}
+}

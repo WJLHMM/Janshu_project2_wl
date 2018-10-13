@@ -1,0 +1,5 @@
+<ul class="board" >
+	<li class="recommendlist" *ngFor="let list of recommendlist" (click)="doBoder(list.id)">
+		<img [src]="list.imgUrl" alt="">
+	</li>
+</ul>

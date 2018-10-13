@@ -1,0 +1,37 @@
+<div 
+	class="banner"
+	(mouseenter) = "bannercontrollertoggle('block')"
+	(mouseleave) = "bannercontrollertoggle('none')"
+
+>
+	<ul class="bannerwrapper" style = "transform:translateX(-12.5%);transition:0.3s all">
+		<li class="bannerimgitem" 
+			*ngFor = "let item of bannerimglist"
+			(click)="doBanner(item.id)"
+		>
+			<img class="bannerimg" src={{item.imgUrl}} alt="" class="bannerimg">
+		</li>
+	</ul>
+	<p 
+		class="bannercontrollerl" 
+		style="display: none"
+		(click) = "bannerslidel()"
+	>
+		<i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>
+	</p>
+	<p 
+		class="bannercontrollerr" 
+		style="display: none"
+		(click) = "bannerslider()"
+	>
+		<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+	</p>
+	<ul class="bannershowtip">
+		<li class="bannershowtipitem" style="background:red"></li>
+		<li class="bannershowtipitem" style="background:#969696"></li>
+		<li class="bannershowtipitem" style="background:#969696"></li>
+		<li class="bannershowtipitem" style="background:#969696"></li>
+		<li class="bannershowtipitem" style="background:#969696"></li>
+		<li class="bannershowtipitem" style="background:#969696"></li>
+	</ul>
+</div>

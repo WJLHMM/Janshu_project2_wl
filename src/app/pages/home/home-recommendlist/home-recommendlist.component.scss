@@ -1,0 +1,39 @@
+@import '~variables.scss';
+
+.recommendlistWrapper {
+	width:625px;
+	flex-wrap: wrap;
+	margin-top:25px;
+	padding-bottom: 25px;
+	border-bottom:1px solid $splitline;
+	@include flexlayout(flex-start,center);
+	.recommendlistitem {
+		height:34px;
+		cursor: pointer;
+		margin-top:20px;
+		padding-right:10px;
+		margin-right: 20px;
+		border:1px solid $maincolor;
+		background:$fontcolor;
+		border-radius: 4px;
+		@include flexlayout(flex-start,center);
+		img {
+			display: block;
+			width:32px;
+			height:32px;
+			color:$maincolor;
+			border-radius: 4px;
+		}
+		p {
+			margin-left: 10px;
+			font-size: 14px;
+		}
+	}
+	.getmorelist {
+		padding-top:17px;
+		font-size: 14px;
+		color:$maincolor;
+		cursor: pointer;
+	}
+
+}

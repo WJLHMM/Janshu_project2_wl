@@ -1,0 +1,60 @@
+<header class="container">
+	<p class="logo" routerLink="home">
+		<img src="https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="header log">
+	</p>
+	<nav >
+		<div class="home" routerLink="home">首页</div>
+		<div class="download" routerLink="download">下载App</div>
+		<form class="search" >
+			<i 
+				class="fa fa-search searchicon" aria-hidden="true" 
+				style ="right:6px,backgroundColor:#eee"
+				(click)="searchkey()"
+			></i>
+			<input 
+				id ="search_inp"
+				type="text" name="" 
+				placeholder="搜索" 
+				style ="width:160px"
+				(focus) = "formViewToggle($event,true,'240px','-74px','#969696')" 
+				(blur) = "formViewToggle($event,false,'160px','6px','#eee')"
+			/>
+			<div 
+				class="searchinfoshow" 
+				(mouseenter) = "searchinfoToggle(true)"
+				(mouseleave) = "searchinfoToggle(false)"
+				*ngIf="isFormview||isSearchinfo"
+			>
+				<ul class="searchinfoitem">
+					<li class="searchinfotitle"> 
+						<p class='inputinfo'>热门搜索</p>
+						<p class="inputinfo right"
+							(click) = "refreshitmefn($event)"
+						>
+							<i class="fa fa-refresh" aria-hidden="true" style="transition:0.2s ease-in"></i>&nbsp;换一批
+						</p>
+					</li>
+					<li class="item" *ngFor = "let item of listshow;let i = index;">{{item}}</li>
+				</ul>
+				<ul class="inputkeylist">
+					<li class="inputkeyitem" *ngFor="let item of searchKeyList">
+						<div class="inputkeyitemleftwrapper">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<span>&nbsp;&nbsp;{{item}}</span>
+						</div>
+						<i class="fa fa-times x" aria-hidden="true" (click)="deletesearchkey($event)"></i>
+					</li>
+				</ul>
+				<div class='arrow-box1'></div>
+				<div class='arrow-box2'></div>
+			</div>
+		</form>
+		<div class="font"><i class="fa fa-font " aria-hidden="true">α</i></div>
+		<div class="login_btn" *ngIf = '!isLogin' routerLink="login">登录</div>
+		<div class="login_btn" *ngIf = 'isLogin' (click)="logoutfn()">退出</div>
+	</nav>
+    <div class="register_btn" routerLink="register">注册</div>
+    <div class="post_btn"><i class="fa fa-pencil" aria-hidden="true" ></i>写文章</div>
+
+
+</header>

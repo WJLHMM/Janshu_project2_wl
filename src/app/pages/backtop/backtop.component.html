@@ -1,0 +1,15 @@
+
+<div class="backtopwrapper"
+	(mouseenter) = "backtoptexttoggle(true)"
+	(mouseleave) = "backtoptexttoggle(false)"
+	(click) = "backtopfn()"
+	*ngIf="isBacktop"
+>
+	<p class="backtop"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i></p>
+	<div class="showtext"
+		*ngIf="isBacktoptext"
+	>
+		回到顶部
+		<p class="arrow-box5"></p>
+	</div>
+</div>

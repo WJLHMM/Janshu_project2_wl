@@ -1,0 +1,45 @@
+
+<div class="recommendauthors">
+	<div class="ratitle">
+		<div class="barcode"
+			(mouseenter) = "fadepictoggle(true)"
+			(mouseleave) = "fadepictoggle(false)"
+		>
+			<p class="barcodeimg">
+				<img src="https://cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png" alt="">
+			</p>
+			<ul class="ratext">
+				<li class="top">下载简书手机App&nbsp;&nbsp;<i class="fa fa-angle-right fl-lg" aria-hidden="true"></i></li>
+				<li class="bottom">随时随地发现和创作内容</li>
+			</ul>
+			<p class="fadepic" *ngIf="isFadepic">
+				<img class="fadepicitem" src="https://cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png" alt="">
+			</p>
+			<div class='arrow-box3' *ngIf="isFadepic"></div>
+			<div class='arrow-box4' *ngIf="isFadepic"></div>
+		</div>
+		<div class="authortiel">
+			<p class="recommendname">推荐作者</p>
+			<p class="rarefresh"
+				(click) ="refreshitme($event,listpage+1)"
+			>
+				<i class="fa fa-refresh" aria-hidden="true" style="transition:0.2s ease-in"></i>&nbsp;换一批
+			</p>
+		</div>
+	</div>
+	<ul class="ralist" >
+		<li class="ralistitem" *ngFor = "let list of recommendauthorslist" >
+			<p class="ralistavatar" (click)="doRecommendauthors(list.id)">
+				<img [src]="list.imgUrl" alt="" class="avaterpic">
+			</p>
+			<div class="ralistinfo">
+				<div class="ralistinfonameadd">
+					<p class="ralistnickname" (click)="doRecommendauthors(list.id)">{{list.nickname}}</p>
+					<p class="ralistadd"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;关注</p>
+				</div>
+				<p class="remark">{{list.achievement}}</p>
+			</div>
+		</li>
+	</ul>
+	<div class="checkall">查看全部&nbsp;&nbsp;<i class="fa fa-angle-right fl-lg" aria-hidden="true"></i></div>
+</div>

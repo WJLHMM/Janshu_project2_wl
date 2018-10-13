@@ -1,0 +1,51 @@
+// variable
+
+$fa-font-path: "../node_modules/font-awesome/fonts";
+
+$redcolor:#ea6f5a;
+$inputbackgroundcolor:#eee;
+$inputbackgroundcolor2: rgb(250, 255, 189);
+$maincolor:#969696;
+$maincolor2:#fff;
+$maincolor3:#333;
+$fontcolor:#f7f7f7;
+$splitline:#f0f0f0;
+$addgreen:#42c02e;
+$bgc1:#000;
+$btn_blue:#3194d0;
+
+
+
+
+// @minxin
+
+// @mixin h($h) {
+// 	height:$h;
+// }
+
+// @mixin w($w) {
+// 	width:$w;
+// }
+
+// @mixin fc($fc) {
+// 	color:$fc;
+// }
+
+// @mixin fs($fs) {
+// 	font-size:$fs;
+// }
+
+// @mixin display($d) {
+// 	display: $d;
+// }
+
+@mixin flexlayout($jcd,$aid) {
+	display: flex;
+	justify-content: $jcd;
+	align-items: $aid;
+}
+
+// @mixin bgc($c) {
+// 	background-color: $c;
+// }
+

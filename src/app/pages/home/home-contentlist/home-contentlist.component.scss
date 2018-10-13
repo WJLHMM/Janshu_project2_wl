@@ -1,0 +1,79 @@
+@import '~variables.scss';
+
+.contentlistwrapper  {
+	width:625px;
+	font-size: 14px;
+	color:$maincolor;
+	margin-top: 30px;
+	.item {
+		width:100%;
+		margin-bottom: 20px;
+		padding-top:5px;
+		padding-bottom:20px;
+		border-bottom:1px solid $splitline;
+		@include flexlayout(space-between,center)
+		.contentlistleft{
+			padding-right:10px;
+			.title {
+				color: #333;
+				font-size: 18px;
+				font-weight:bold;
+				line-height: 1.2;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.abstract {
+				margin-top:5px;
+				font-size:13px;
+				line-height: 24px;
+			}
+			.meta {
+				font-size:12px;
+				margin-top: 10px;
+				@include flexlayout(flex-start,center);
+				.nickname {
+					&:hover {
+						color:$maincolor3;
+					}
+					cursor: pointer;
+				}
+				.comment {
+					margin-left: 10px;
+					cursor: pointer;
+					&:hover {
+						color:$maincolor3;
+					}
+				}
+				.love {
+					margin-left: 10px;
+				}
+			}
+
+		}
+		.contentlistright {
+			width:125px;
+			height:100px;
+			img {
+				display:block;
+				width:125px;
+				height:100px;
+				border-radius:4px;
+			}
+		}
+
+	}
+	.readmore {
+		width:625px;
+		height:40px;
+		cursor: pointer;
+		font-size: 16px;
+		color:$maincolor2;
+		background:$maincolor;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 20px;
+		margin-bottom: 50px;
+	} 
+}

@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="leftwrapper">
+		<app-home-banner></app-home-banner>
+		<app-home-recommendlist [topiclist]="topiclist"></app-home-recommendlist>
+		<app-home-contentlist [contentlist]="contentlist"></app-home-contentlist>
+	</div>
+	<div class="rightwrapper">
+		<app-home-board [recommendlist]="recommendlist"></app-home-board>	
+		<app-home-recommendauthors [recommendauthorslist]="recommendauthorslist"></app-home-recommendauthors>
+	</div>
+</div>

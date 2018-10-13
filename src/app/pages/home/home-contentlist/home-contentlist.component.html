@@ -1,0 +1,19 @@
+<div class="contentlistwrapper">
+	<div class="item" *ngFor ="let list of contentlist">
+		<ol class="contentlistleft">
+			<h1 class="title" (click)="doContentlist(list.id)">{{list.title}}</h1>
+			<li class="abstract">{{list.abstract}}</li>
+			<li class="meta">
+				<p class="nickname">{{list.nickname}}</p>
+				<p class="comment"><i class="fa fa-commenting" aria-hidden="true"></i>&nbsp;{{list.comment}}</p>
+				<p class="love"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;{{list.love}}</p>
+			</li>
+		</ol>
+		<p class="contentlistright" *ngIf="list.type==0"><img src={{list.imgUrl}} alt="" class="listavatar"></p>
+	</div>
+	<div class="readmore"
+		(click)="showmorecontent(morecontentlistpage+1)"
+	>
+		阅读更多
+	</div>
+</div>
